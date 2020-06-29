@@ -25,6 +25,11 @@ use " choco install 'program' ". I will past in here somes link case you need th
 
 python:
 https://www.python.org/
+
+for slackware users this python 3.7 from my repository on google drive:
+
+https://drive.google.com/drive/u/2/folders/1oZDT1yxhozkJKWwSNB76uO89LyciA7Je
+
 maybe in linux for nvim users, for activated python support
 you need run with pip3
 
