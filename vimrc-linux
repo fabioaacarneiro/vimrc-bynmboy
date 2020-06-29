@@ -1,0 +1,70 @@
+"linux config file
+
+call plug#begin()
+Plug 'morhetz/gruvbox'
+Plug 'scrooloose/nerdtree'
+Plug 'sirver/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'ervandew/supertab'
+Plug 'w0rp/ale'
+Plug 'sheerun/vim-polyglot'
+Plug 'shougo/neocomplete.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'vim-scripts/AutoComplPop'
+Plug 'vim-test/vim-test'
+call plug#end()
+
+set guifont=Lucida_Console:h14:cANSI:qDRAFT
+set number
+set title
+set relativenumber
+set background=light
+set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
+colorscheme gruvbox
+
+let g:UltiSnipsJumpForwardTrigger="<TAB>"
+let g:UltiSnipsJumpBackwardTrigger="<S-TAB>"
+let g:UltiSnipsEditSplit="vertical"
+let g:SuperTabDefaultCompletionType = "<c-n>"
+
+map <F2> :NERDTreeToggle <CR>
+map <F3> :!javac "%" && java "%" <CR>
+map <F4> :!luac "%" && lua "%" <CR>
+
+"command bellow open cmd windows, change for your terminal linux
+
+nnoremap <C-t> :!cmd <CR>
+
+
+" save command whith Ctrl + s
+
+nnoremap <C-s> :w! <CR>
+
+
+" save command whith s
+
+nnoremap <s> :w <CR>
+
+
+" save command whith Ctrl + q
+
+nnoremap <C-q> :q! <CR>
+
+
+" save command which q
+
+nnoremap <q> :q <CR>
+
+
+
+" in GVim on windows or linux to open explorer or file manager 
+" to open a file whith " Ctrl + o " discoment line bellow
+
+"nnoremap <C-o> :browse open <CR>
+
+
+
+" in Gvim on windows or linux to open explorer or file manager 
+" to open 'save as' explorer whith " Ctrl + s " discoment line bellow
+
+"nnoremap <C-s> :browse save <CR>
