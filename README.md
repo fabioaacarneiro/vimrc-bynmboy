@@ -27,9 +27,15 @@ python:
 https://www.python.org/
 maybe in linux for nvim users, for activated python support
 you need run with pip3
+
 pip3 install --user nvim
-after this step, run in nvim " :checkhealth " for check the
-python support in your nvim
+
+
+after this step, run in nvim 
+
+:checkhealth 
+
+for check the python support in your nvim
 
 chocolatey:
 https://chocolatey.org/
