@@ -55,10 +55,13 @@ to use on vim (_vimrc) or nvim (init.vim)
 for linux user, you need download vimrc-linux and rename to
 use on vim (.vimrc) or nvim (init.vim)
 
+
 if you want use dark colorscheme just change de code bellow:
+
 set background=light
 
 for the code bellow:
+
 set background=dark
 
 and be happy =D
