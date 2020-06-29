@@ -14,7 +14,6 @@ Plug 'vim-scripts/AutoComplPop'
 Plug 'vim-test/vim-test'
 call plug#end()
 
-set guifont=Lucida_Console:h14:cANSI:qDRAFT
 set number
 set title
 set relativenumber
