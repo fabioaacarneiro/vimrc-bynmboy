@@ -67,3 +67,26 @@ nnoremap <q> :q <CR>
 " to open 'save as' explorer whith " Ctrl + s " discoment line bellow
 
 "nnoremap <C-s> :browse save <CR>
+
+fun! MkdirIfNeeded(dir, flags, permissions)
+  if !isdirectory(a:dir)
+    call mkdir(a:dir, a:flags, a:permissions)
+  endif
+endfun
+
+" Set (& create if needed) a temp directory to keep backup & swap files
+if has('win32')
+     let whoami = substitute(system("whoami /LOGONID"), '\n', '', '')
+     let tmpdir = 'C:/tmp/vim_' . whoami
+else
+     let whoami = substitute(system("whoami"), '\n', '', '')
+     let tmpdir = '/var/tmp/vim_' . whoami
+endif
+call MkdirIfNeeded(tmpdir, 'p', 0700)
+   
+let &backupdir = tmpdir
+let &dir = tmpdir
+let &undodir = tmpdir
+~/.config/nvim/init.vim [S/L]                                                                                                                               92,1           Fim
+                                                                                                                                                                      
+
