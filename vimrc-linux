@@ -87,6 +87,6 @@ call MkdirIfNeeded(tmpdir, 'p', 0700)
 let &backupdir = tmpdir
 let &dir = tmpdir
 let &undodir = tmpdir
-~/.config/nvim/init.vim [S/L]                                                                                                                               92,1           Fim
+                                                                                                                            92,1           Fim
                                                                                                                                                                       
 
