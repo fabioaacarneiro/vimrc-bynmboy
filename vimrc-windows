@@ -1,6 +1,8 @@
-" Vim with all enhancements
-source $VIMRUNTIME/vimrc_example.vim
 
+" This Setup for Vim or Nvim has make by me, Fabio Carneiro,
+" for more information of my work, see my website in portuguese
+" language < www.fabioaacarneiro.com.br >
+" my youtube channel < youtube.com/fabiocarneiro >
 " Use the internal diff if available.
 " Otherwise use the special 'diffexpr' for Windows.
 if &diffopt !~# 'internal'
@@ -39,78 +41,88 @@ function MyDiff()
   endif
 endfunction
 
-"linux user, copy the code bellow, you don't
-"need more then this
-
+"------------------------------ Plugins Session
 call plug#begin()
+Plug 'sts10/vim-pink-moon'
 Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree'
 Plug 'sirver/ultisnips'
-Plug 'honza/vim-snippets'
+"Plug 'honza/vim-snippets'
 Plug 'ervandew/supertab'
 Plug 'w0rp/ale'
 Plug 'sheerun/vim-polyglot'
-Plug 'shougo/neocomplete.vim'
+"Plug 'shougo/neocomplete.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'vim-scripts/AutoComplPop'
 Plug 'vim-test/vim-test'
+Plug 'sainnhe/edge'
 call plug#end()
 
-set guifont=Lucida_Console:h14:cANSI:qDRAFT
+"------------------------------ Sets Session
 set number
 set title
 set relativenumber
-set background=light
 set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
-colorscheme gruvbox
 
+"------------------------------ Colorscheme Session
+set background=dark
+"set background=light
+
+"colorscheme gruvbox
+colorscheme edge
+"colorscheme pink-moon
+
+"------------------------------ Leader key Session
+let mapleader = ","
+nnoremap <leader>e :vsplit ~/.vimrc <cr>
+nnoremap <leader>s :source ~/.vimrc <cr>
+nnoremap <Leader>" viw<esc>a"<esc>bi"<esc>ela
+nnoremap <Leader>' viw<esc>a'<esc>bi'<esc>ela
+nnoremap <Leader>( viw<esc>a)<esc>bi(<esc>ela
+nnoremap <Leader>{ viw<esc>a}<esc>bi{<esc>ela
+nnoremap <Leader>[ viw<esc>a]<esc>bi[<esc>ela
+nnoremap <Leader>< viw<esc>a><esc>bi<<esc>ela
+nnoremap <Leader>/ <esc>I // ~ <esc> A
+nnoremap <Leader># <esc>I # ~ <esc> A
+nnoremap <Leader>u :UltiSnipsEdit <cr>
+
+"------------------------------ Variables Session
 let g:UltiSnipsJumpForwardTrigger="<TAB>"
 let g:UltiSnipsJumpBackwardTrigger="<S-TAB>"
 let g:UltiSnipsEditSplit="vertical"
 let g:SuperTabDefaultCompletionType = "<c-n>"
 
+"------------------------------ Map keys Session
 map <F2> :NERDTreeToggle <CR>
 map <F3> :!javac "%" && java "%" <CR>
 map <F4> :!luac "%" && lua "%" <CR>
+map <F9> :!g++ -c "%" && g++ main.o -o sfml-app -lsfml-graphics -lsfml-window -lsfml-system && ./sfml-app <CR>
 
-"command bellow open cmd windows, change for your terminal linux
-
+"------------------------------ My personal keys combination
+"----- Clone current line
+inoremap <c-d> <esc>VypA
+"----- Cut current line
+inoremap <c-x> <esc>Vx
+"----- Save actual file which permission ! and back to insert mode
+nnoremap <c-s> :w! <cr> A
+"----- Command bellow open cmd windows, change for your terminal linux
 nnoremap <C-t> :!cmd <CR>
-
-
-" save command whith Ctrl + s
-
-nnoremap <C-s> :w! <CR>
-
-
-" save command whith s
-
-nnoremap <s> :w <CR>
-
-
-" save command whith Ctrl + q
-
+"----- Save command whith s
+nnoremap <s> :w <CR> A
+"----- Exit command whith Ctrl + q
 nnoremap <C-q> :q! <CR>
-
-
-" save command which q
-
+"----- Save command which q
 nnoremap <q> :q <CR>
 
-
-
 " in GVim on windows or linux to open explorer or file manager 
-" to open a file whith " Ctrl + o " discoment line bellow
-
+" to open a file whith " Ctrl + o " discoment line bello
 "nnoremap <C-o> :browse open <CR>
-
-
 
 " in Gvim on windows or linux to open explorer or file manager 
 " to open 'save as' explorer whith " Ctrl + s " discoment line bellow
-
 "nnoremap <C-s> :browse save <CR>
 
+"------------------------------ Swap Files Session
 fun! MkdirIfNeeded(dir, flags, permissions)
   if !isdirectory(a:dir)
     call mkdir(a:dir, a:flags, a:permissions)
@@ -130,6 +142,3 @@ call MkdirIfNeeded(tmpdir, 'p', 0700)
 let &backupdir = tmpdir
 let &dir = tmpdir
 let &undodir = tmpdir
-                                                                                                                              92,1           Fim
-                                                                                                                                                                      
-
