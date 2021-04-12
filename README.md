@@ -41,22 +41,55 @@ maybe in linux for nvim users, for activated python support
 you need run with pip3
 
 pip3 install --user nvim
+or in case some plugins don't work because they need python integration with
+vim or neovim, you need run the following commands
 
+in case you use neovim:
+pip3 install pynvim
+
+in case you use vim:
+pip3 install pyvim
 
 after this step, run in nvim 
 
 :checkhealth 
 
 for check the python support in your nvim
+in vim case, you don't need do this, just
+install VimPlug to install the plugins in
+my vimrc
+
+to install vimplug, follow the instruction on link bellow:
+https://github.com/junegunn/vim-plug
+
+after vimplug installed with success open your vim or nvim
+and run command bellow:
+
+:PlugInstall
+
+after all plugins has succesfully installed
+use Ctrl+w, q  to close dialog of plugin install in editor
+close and reopen your editor or try use command bellow:
+
+for vim
+:source ~/.vimrc
+
+for neovim
+:source ~/.config/nvim/init.vim
+
+on windows, location of vimrc file is diferent to find,
+where file is locate use in vim or neovim the bellow command
+on your vim or neovim
+
+:echo $MYVIMRC
+
+now you know how find your vimrc file or init.vimrc file
 
 chocolatey:
 https://chocolatey.org/
 
 powershell:
 https://docs.microsoft.com/pt-br/powershell/?view=powershell-7
-
-vim:
-https://www.vim.org/download.php
 
 neovim:
 https://neovim.io/
@@ -66,6 +99,10 @@ vimawesome.com/
 
 vim-plug:
 https://github.com/junegunn/vim-plug
+
+vim:
+https://www.vim.org/download.php
+
 
 for Windows user, you need download vimrc-windows and rename 
 to use on vim (_vimrc) or nvim (init.vim)
