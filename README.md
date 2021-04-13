@@ -4,6 +4,9 @@ this is my vimrc setup, whith plugins, colorscheme and more
 my channel on youtube ( portuguese language ):
 youtube.com/fabiocarneiro
 
+my website ( portuguese language );
+www.fabioaacarneiro.com.br
+
 my gruvbox theme for xterm terminal emulator:
 https://github.com/bynmboy/gruvbox-xterm
 
@@ -11,9 +14,12 @@ my e-mail for contact:
 fabiocarneiro@slackjeff.com.br
 
 nvim deepin 20 whitout colorscheme
+
 ![Alt text](https://github.com/bynmboy/vimrc-bynmboy/blob/master/vim.png)
 
+
 gvim windows seven with gruvbox light colorscheme
+
 ![Alt text](https://github.com/bynmboy/vimrc-bynmboy/blob/master/gvim.PNG)
 
 
