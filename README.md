@@ -103,6 +103,18 @@ https://github.com/junegunn/vim-plug
 vim:
 https://www.vim.org/download.php
 
+case you use Debian, or other Debian-based distro, vim in debian repo
+don't have python3 support, you can check this whith bellow command
+:echo has("python3")
+if this command return 0, your vim don't have python support,
+case return 1, your vim have support for python
+
+you have 3 choise to resolve this problem:
+1 compile the vim whith python suport, but is more dificult
+and i recomend bellow 2 options:
+use vim-gtk,but if you don't like gtk application go to
+the last solution, use neovim, he coming whith python support,
+this is more easy.
 
 for Windows user, you need download vimrc-windows and rename 
 to use on vim (_vimrc) or nvim (init.vim)
