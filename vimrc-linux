@@ -36,8 +36,25 @@ colorscheme edge
 
 "------------------------------ Leader key Session
 let mapleader = ","
+"case you use vim discoment the two lines bellow
 nnoremap <leader>e :vsplit ~/.vimrc <cr>
 nnoremap <leader>s :source ~/.vimrc <cr>
+"-------------------------------
+"case you use neovim discoment the tow lines bellow
+nnoremap <leader>e :vsplit ~/.config/nvim/init.vim <cr>
+nnoremap <leader>s :source ~/.config/nvim/init.vim <cr>
+"-------------------------------
+" case you use windows and vim or neovim
+" you must need find your config file fo vim or neovim
+" in this case run in vim or neovim console
+" the bellow command
+" :echo $MYVIMRC
+" and vim or neovim show to you where you find your file
+" then you change:
+" ~/.config/nvim/init.vim
+" to
+" /path/to/my/file/(vim_file or neovim_file)
+"-------------------------------
 nnoremap <Leader>" viw<esc>a"<esc>bi"<esc>ela
 nnoremap <Leader>' viw<esc>a'<esc>bi'<esc>ela
 nnoremap <Leader>( viw<esc>a)<esc>bi(<esc>ela
