@@ -132,3 +132,5 @@ for the code bellow:
 set background=dark
 
 and be happy =D
+
+![Alt text](https://github.com/bynmboy/vimrc-bynmboy/blob/master/vimfile.png)
