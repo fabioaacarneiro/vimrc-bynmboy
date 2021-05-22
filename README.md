@@ -151,6 +151,4 @@ in case you use neovim, you need adaptade this command for you
 vim on live-server:
 ![Alt text](https://github.com/bynmboy/vimrc-bynmboy/blob/master/gitpic.png)
 
-![Alt text](https://github.com/bynmboy/vimrc-bynmboy/blob/master/vimfile.png)
-
 
