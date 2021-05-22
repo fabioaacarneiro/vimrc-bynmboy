@@ -5,6 +5,9 @@
 "
 "------------------------------ Plugins Session
 call plug#begin()
+Plug 'tomasiser/vim-code-dark'
+Plug 'mattn/emmet-vim'
+Plug 'turbio/bracey.vim'
 Plug 'sts10/vim-pink-moon'
 Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree'
@@ -20,7 +23,44 @@ Plug 'vim-test/vim-test'
 Plug 'sainnhe/edge'
 call plug#end()
 
+"------------------------------ Set indent lines style
+" for change style of indent line, just uncoment
+" the line of listchars do you want
+
+"set listchars=tab:\┊\ 
+"set listchars=tab:\⋮\ 
+"set listchars=tab:\┃\ 
+"set listchars=tab:\╿\ 
+"set listchars=tab:\┇\ 
+"set listchars=tab:\˸\ 
+"set listchars=tab:\✫\ 
+"set listchars=tab:\║\ 
+"set listchars=tab:\།\ 
+"set listchars=tab:\⌇\ 
+"set listchars=tab:\✣\ 
+"set listchars=tab:\≬\ 
+"set listchars=tab:\⧼\ 
+set listchars=tab:\│\ 
+
+"------------------------------ Set color and startup
+"indent line
+
+set list
+hi Whitespace ctermfg=237
+autocmd SourcePre * :match Whitespace /\s/
+autocmd SourcePre * :hi Whitespace ctermfg=237
+
+"------------------------------ Set terminal in vim
+inoremap <c-t> <esc>:terminal<CR> A
+nnoremap <c-t> <esc>:terminal<CR> A
+
+"------------------------------ Sets Emmet config
+autocmd FileType html,css,js EmmetInstall
+autocmd FileType html Bracey
+let g:user_emmet_leader_key='<C-Z>'
+
 "------------------------------ Sets Session
+set mouse=a
 set number
 set title
 set relativenumber
@@ -31,8 +71,9 @@ set background=dark
 "set background=light
 
 "colorscheme gruvbox
-colorscheme edge
+"colorscheme edge
 "colorscheme pink-moon
+colorscheme codedark
 
 "------------------------------ Leader key Session
 let mapleader = ","
@@ -41,8 +82,8 @@ nnoremap <leader>e :vsplit ~/.vimrc <cr>
 nnoremap <leader>s :source ~/.vimrc <cr>
 "-------------------------------
 "case you use neovim discoment the tow lines bellow
-nnoremap <leader>e :vsplit ~/.config/nvim/init.vim <cr>
-nnoremap <leader>s :source ~/.config/nvim/init.vim <cr>
+"nnoremap <leader>e :vsplit ~/.config/nvim/init.vim <cr>
+"nnoremap <leader>s :source ~/.config/nvim/init.vim <cr>
 "-------------------------------
 " case you use windows and vim or neovim
 " you must need find your config file fo vim or neovim
@@ -75,6 +116,7 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 map <F2> :NERDTreeToggle <CR>
 map <F3> :!javac "%" && java "%" <CR>
 map <F4> :!luac "%" && lua "%" <CR>
+map <F5> :!clear && node "%" <CR>
 map <F9> :!g++ -c "%" && g++ main.o -o sfml-app -lsfml-graphics -lsfml-window -lsfml-system && ./sfml-app <CR>
 
 "------------------------------ My personal keys combination
