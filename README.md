@@ -128,15 +128,26 @@ to use on vim (_vimrc) or nvim (init.vim)
 for linux user, you need download vimrc-linux and rename to
 use on vim (.vimrc) or nvim (init.vim)
 
+if you are web developer, and if are you need use live server, you need configure Bracey correctly,
+in vimrc file Bracey is configured to start when you open HTML files
+but, you need nodejs installed on you system, i don't test this on windows
+but on linux it's super easy, just follow the commands bellow:
 
-if you want use dark colorscheme just change de code bellow:
+you need go to plugin directory, the command bellow it's for vim plug, thats it's exacly what
+we use in this repository:
 
-set background=light
+1- cd ~/.vim/plugged/bracey.vim for plug
+2- run npm install --prefix server
 
-for the code bellow:
+*** the numbers 1 and 2 it's just for show you like a list like "how to do" alright ? kkk ***
 
-set background=dark
+you can automate this for vim-plug by using the following command in your .vimrc:
 
-and be happy =D
+Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}. 
+
+This will run the npm command every time you update the plugin as well
+in case you use neovim, you need adaptade this command for you
 
 ![Alt text](https://github.com/bynmboy/vimrc-bynmboy/blob/master/vimfile.png)
+
+
